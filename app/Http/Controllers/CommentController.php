@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Inertia\Inertia;
+use Inertia\Response;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 
@@ -10,9 +12,12 @@ class CommentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): Response
     {
         //
+        return Inertia::render('Comments/Index', [
+            //
+        ]);
     }
 
     /**
